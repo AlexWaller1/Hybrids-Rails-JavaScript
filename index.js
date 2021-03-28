@@ -29,4 +29,8 @@ function fetchUsers(){
 // once form is submitted => fetch `post` to my back end
 // do something with the returned object
 
+function createForm(){
+    
+}
+
 // delete - delete a user
