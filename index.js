@@ -14,7 +14,7 @@ function fetchUsers(){
     .then(users => {
        // .then is where we do something with the data fetched
         for (const user of users){
-            
+            // current have rails objects
             let u = new User(user.id, user.name, user.username, user.email)
             // new javascript object created
             u.renderUser()
@@ -54,9 +54,18 @@ function userFormSubmission(e){
 
     let user = {
         name: name,
-        username: username:
+        username: username,
         email: email
     }
+
+    fetch(`${BASE_URL}/users`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+    })
 }
 
 
