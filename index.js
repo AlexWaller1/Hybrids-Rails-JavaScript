@@ -47,7 +47,9 @@ function createForm(){
 }
 
 function userFormSubmission(){
-    
+    let name = document.getElementById("name").value
+    let username = document.getElementById("username").value
+    let email = document.getElementById("email").value
 }
 
 
