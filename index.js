@@ -77,8 +77,6 @@ function userFormSubmission(e){
 
 // delete - delete a user
 
-let buttons = document.querySelectorAll(".delete-bttn")
-
-for (const button of buttons){
-    button.addEventListener("click")
+function deleteUser(){
+    let userId
 }
