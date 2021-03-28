@@ -66,6 +66,8 @@ function userFormSubmission(e){
         },
         body: JSON.stringify(user)
     })
+    .then(resp => resp.json())
+    .then
 }
 
 
