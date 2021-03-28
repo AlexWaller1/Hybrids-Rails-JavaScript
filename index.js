@@ -77,6 +77,10 @@ function userFormSubmission(e){
 
 // delete - delete a user
 
-function deleteUser(){
-    let userId
+function deleteUser(e){
+    let userId = parseInt(e.target.dataset.id)
+
+    fetch(`${BASE_URL}/users/${userId}`), {
+        method: 'DELETE'
+    })
 }
