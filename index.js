@@ -24,4 +24,9 @@ function fetchUsers(){
 
 // create - create a new user
 
+// create a form
+// add an event listener
+// once form is submitted => fetch `post` to my back end
+// do something with the returned object
+
 // delete - delete a user
