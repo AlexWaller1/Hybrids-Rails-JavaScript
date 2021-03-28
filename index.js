@@ -16,6 +16,7 @@ function fetchUsers(){
             
             let u = new User(user.id, user.name, user.username, user.email)
             // new javascript object created
+            u.renderUser()
         }
     })
    
