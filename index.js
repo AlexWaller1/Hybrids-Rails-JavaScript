@@ -42,11 +42,10 @@ function createForm(){
     <input type="submit" value="Create User">
     </form>
     `
+
+   usersForm.addEventListener("submit")
 }
 
-function userFormSubmission(){
-    let usersForm = document.getElementById("users-form")
-    usersForm.addEventListener("submit")
-}
+
 
 // delete - delete a user
