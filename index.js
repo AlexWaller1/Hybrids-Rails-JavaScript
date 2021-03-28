@@ -36,10 +36,10 @@ function createForm(){
     usersForm.innerHTML +=
     `
     <form>
-    Name: <input type="text" id="name">
-    Username: <input type="text" id="username">
-    Email: <input type="text" id="email">
-
+    Name: <input type="text" id="name"><br>
+    Username: <input type="text" id="username"><br>
+    Email: <input type="text" id="email"><br>
+    <input type="submit" value="Create User">
     </form>
     `
 }
