@@ -30,7 +30,7 @@ function fetchUsers(){
 // do something with the returned object
 
 function createForm(){
-    
+    let usersForm = document.getElementById("users-form")
 }
 
 // delete - delete a user
