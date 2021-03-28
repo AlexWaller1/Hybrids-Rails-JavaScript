@@ -62,6 +62,20 @@ function createForm(){
    usersForm.addEventListener("submit", userFormSubmission)
 }
 
+function createHybridForm(){
+    let hybridsForm = document.getElementById("hybrids-form")
+
+    hybridsForm.innerHTML +=
+
+    `
+    <form>
+    <input type="text" id="image"><br>
+    Description: <input type="text" id="caption"><br>
+    <input type="submit" value="Create Hybrid"
+    </form>
+    `
+}
+
 function userFormSubmission(e){
     e.preventDefault(); 
     let name = document.getElementById("name").value
