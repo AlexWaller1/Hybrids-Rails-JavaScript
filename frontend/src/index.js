@@ -74,6 +74,7 @@ function createHybridForm(){
     <input type="submit" value="Create Hybrid"
     </form>
     `
+    hybridsForm.addEventListener("submit", hybridFormSubmission)
 }
 
 function userFormSubmission(e){
