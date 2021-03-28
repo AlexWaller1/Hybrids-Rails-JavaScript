@@ -45,7 +45,8 @@ function createForm(){
 }
 
 function userFormSubmission(){
-    
+    let usersForm = document.getElementById("users-form")
+    usersForm.addEventListener("submit")
 }
 
 // delete - delete a user
