@@ -46,7 +46,8 @@ function createForm(){
    usersForm.addEventListener("submit", userFormSubmission)
 }
 
-function userFormSubmission(){
+function userFormSubmission(e){
+    e.preventDefault(); 
     let name = document.getElementById("name").value
     let username = document.getElementById("username").value
     let email = document.getElementById("email").value
