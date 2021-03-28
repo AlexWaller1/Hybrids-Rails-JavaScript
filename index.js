@@ -52,7 +52,11 @@ function userFormSubmission(e){
     let username = document.getElementById("username").value
     let email = document.getElementById("email").value
 
-    console.log(name, username, email)
+    let user = {
+        name: name,
+        username: username:
+        email: email
+    }
 }
 
 
