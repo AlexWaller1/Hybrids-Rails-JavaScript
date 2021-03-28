@@ -15,7 +15,8 @@ class User{
         usersDiv.innerHTML += 
         `
         <ul>
-        <li> ${this.name} - ${this.email} </li>
+        <h3> Username: ${this.username} </h3>
+        <li> Name: ${this.name} - Email: ${this.email} </li>
         </ul
         `
     }
