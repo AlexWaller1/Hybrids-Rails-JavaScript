@@ -82,5 +82,7 @@ function deleteUser(e){
 
     fetch(`${BASE_URL}/users/${userId}`), {
         method: 'DELETE'
-    })
+    }
+
+    this.location.reload()
 }
