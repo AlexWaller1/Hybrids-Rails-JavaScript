@@ -23,6 +23,20 @@ function fetchUsers(){
    
 }
 
+function fetchHybrids(){
+    fetch(`${BASE_URL}/hybrids`)
+    .then(resp => resp.json())
+    .then(hybrids => {
+        // .then is where we do something with data fetched
+        for (const hybrid of hybrids){
+            // currently a rails object
+            let u = new Hybrid(hybrid.id, hybrid.image, hybrid.caption)
+            // hybrids javascript objects created
+            u.renderHybrid()
+        }
+    })
+}
+
 
 
 // create - create a new user
