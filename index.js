@@ -67,7 +67,10 @@ function userFormSubmission(e){
         body: JSON.stringify(user)
     })
     .then(resp => resp.json())
-    .then
+    .then(user => {
+        let u = new User(user.id, user.name, user.username, user.email)
+        u.renderUser();
+    })
 }
 
 
