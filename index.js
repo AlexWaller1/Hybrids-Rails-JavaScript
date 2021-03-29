@@ -114,11 +114,22 @@ function fetchUsers(){
         <form>
         Image: <input type="text" id="image"><br>
         Caption: <input type="text" value="caption"><br>
-        <input type="submit" value="Create User">
+        <input type="submit" value="Create Hybrid">
         </form>
         `
          hybridsForm.addEventListener("submit", hybridFormSubmission)
 
+    }
+
+    function hybridFormSubmission(e){
+        e.preventDefault();
+        let image = document.getElementById("image").value
+        let caption = document.getElementById("caption").value
+
+        let hybrid = {
+            image: image,
+            caption: caption
+        }
     }
     
 
