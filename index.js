@@ -91,6 +91,7 @@ function fetchUsers(){
         fetch(`${BASE_URL}/users/${userId}/hybrids`)
         .then(resp => resp.json())
         .then(hybrids => {
+            console.log("ruby object", hybrids)
               // we do something with hybrids fetched, which are currently Ruby Objects
               for (const hybrid of hybrids){
                   // now convert to JavaScript Objects

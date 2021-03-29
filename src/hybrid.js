@@ -1,7 +1,9 @@
 class Hybrid{
-    constructor(img_src, caption){
+    constructor(id, img_src, caption, user_id){
+        this.id = id;
         this.img_src = img_src;
         this.caption = caption;
+        this.user_id = user_id;
     }
 
     // instance method thats going to render object to the dom
