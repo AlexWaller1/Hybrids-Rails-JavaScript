@@ -130,8 +130,22 @@ function fetchUsers(){
             image: image,
             caption: caption
         }
+        fetch(`${BASE_URL}/users/${userId}/hybrids`, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(hybrid)
+        })
+        .then(resp => resp.json())
+        .then(hybrid => {
+            let h = new Hybrid(hybrid.id, hybrid.img_src, hybrid.caption, hybrid.user_id)
+            h.renderHybrid();
+        })
     }
     
+    // scrub hybrid from database
 
 
 
