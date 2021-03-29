@@ -74,6 +74,17 @@ function fetchUsers(){
 
     // delete - delete a user
 
+    function deleteUser(){
+
+        let userId = parseInt(event.target.dataset.id)
+
+        fetch(`${BASE_URL}/users/${userId}`, {
+            method: 'DELETE'
+        })
+
+        this.location.reload()
+    }
 
 
-    
+
+
