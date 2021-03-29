@@ -117,7 +117,7 @@ function fetchUsers(){
         <input type="submit" value="Create User">
         </form>
         `
-
+         hybridsForm.addEventListener("submit", hybridFormSubmission)
 
     }
     
