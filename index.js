@@ -11,9 +11,9 @@ function fetchUsers(){
     fetch(`${BASE_URL}/users`)
     .then(resp => resp.json())
     .then(users => {
-        // we do something withthe data fetched
+        // we do something withthe data fetched, the data is still composed of Ruby Objects
         for (const user of users){
-            
+            // this will convert them to JavaScript Objects
             let u = new User(user.id, user.name, user.username, user.email)
             u.renderUser()
         }
@@ -73,3 +73,7 @@ function fetchUsers(){
 
 
     // delete - delete a user
+
+
+
+    
