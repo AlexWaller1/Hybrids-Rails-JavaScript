@@ -88,12 +88,20 @@ function fetchUsers(){
     
     // read - fetch hybrids index for a give user
     function fetchHybrids(){
-        fetch
-        .then
-        .then
+        fetch(`${BASE_URL}/users/${userId}/hybrids`)
+        .then(resp => resp.json())
+        .then(hybrids => {
+              // we do something with hybrids fetched, which are currently Ruby Objects
+              for (const hybrid of hybrids){
+                  // now convert to JavaScript Objects
+                  let h = new Hybrid(hybrid.id, hybrid.img_src, hybrid.caption, hybrid.user_id)
+                  h.renderHybrid()
+              }
+
+        })
     }
     
-    
+
 
 
 
