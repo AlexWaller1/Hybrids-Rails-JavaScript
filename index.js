@@ -85,6 +85,17 @@ function fetchUsers(){
         this.location.reload()
     }
 
+    
+    // read - fetch hybrids index for a give user
+    function fetchHybrids(){
+        fetch
+        .then
+        .then
+    }
+    
+    
+
+
 
 
 

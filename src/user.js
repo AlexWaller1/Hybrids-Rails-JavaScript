@@ -7,6 +7,7 @@ class User{
     }
 
     // render user instance method
+    // will probably need some eventListeners for rendering hybrid data
 
     renderUser() {
            let usersDiv = document.getElementById("users-container")
