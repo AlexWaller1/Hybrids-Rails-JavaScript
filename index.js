@@ -71,6 +71,8 @@ function fetchUsers(){
         })
     }
 
+    
+
 
     // delete - delete a user
 
@@ -100,6 +102,23 @@ function fetchUsers(){
               }
 
         })
+    }
+
+    // create a form for the Hybrids
+    // add an eventListener
+    function createHybridForm(){
+        let hybridsForm = document.getElementById("hybrids-form")
+        // add HTML to hybrids-form
+        hybridsForm.innerHTML +=
+        `
+        <form>
+        Image: <input type="text" id="image"><br>
+        Caption: <input type="text" value="caption"><br>
+        <input type="submit" value="Create User">
+        </form>
+        `
+
+
     }
     
 
