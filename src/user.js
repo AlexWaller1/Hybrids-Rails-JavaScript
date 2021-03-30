@@ -19,6 +19,7 @@ class User{
            <li> Name: ${this.name} - Email: ${this.email} </li>
            </ul>
            <button class="delete-bttn" data-id=${this.id} onclick="deleteUser()">Delete User</button>
+           <button class="get-hybrids-bttn" data-id=${this.id} onclick="fetchHybrids()">See Hybrids</button>
            `
     }
 }
