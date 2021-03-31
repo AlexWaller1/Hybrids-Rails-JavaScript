@@ -15,7 +15,7 @@ class Hybrid{
 
         `
         <ul>
-        <img src=${this.image}, alt="Hybrid Image">
+        <img src=${this.img_src}, alt="Hybrid Image">
         <li> Description: ${this.caption} </li>
         </ul>
         `
