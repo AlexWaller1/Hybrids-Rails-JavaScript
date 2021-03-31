@@ -90,11 +90,14 @@ function fetchUsers(){
     
     // read - fetch hybrids index for a give user
     function fetchHybrids(){
-        let hybridsFormContainer = document.getElementById("hybrids-form")
+        let hybridsForm = document.getElementById("hybrids-form")
         // add HTML to hybrids-form
-         let hybridsForm = hybridsFormContainer.querySelector("form")
+         // let hybridsForm = hybridsFormContainer.querySelector("form")
+         console.log(hybridsForm)
+         hybridsForm.addEventListener("submit", hybridFormSubmission, false)
           hybridsForm.classList.remove("hidden")
         let userId = parseInt(event.target.dataset.id)
+        document.getElementById("userId").value = userId
         console.log(`${BASE_URL}/users/${userId}`)
         fetch(`${BASE_URL}/users/${userId}/hybrids`)
         .then(resp => resp.json())
@@ -110,27 +113,27 @@ function fetchUsers(){
         })
     }
 
-    // create a form for the Hybrids
-    // add an eventListener
-    function createHybridForm(){
-        let hybridsFormContainer = document.getElementById("hybrids-form")
-        // add HTML to hybrids-form
-         let hybridsForm = hybridsFormContainer.querySelector("form")
-         hybridsForm.addEventListener("submit", hybridFormSubmission)
-
-    }
+    
+    
 
     function hybridFormSubmission(e){
-        e.preventDefault();
+        
+         e.preventDefault();
         
 
         let image = document.getElementById("image").value
         let caption = document.getElementById("caption").value
+        let userId = document.getElementById("userId").value
 
         let hybrid = {
             image: image,
-            caption: caption
+            caption: caption,
+            userId: userId
+            
         }
+
+        
+
         fetch(`${BASE_URL}/users/${userId}/hybrids`, {
             method: "POST",
             headers: {
