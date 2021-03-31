@@ -150,6 +150,9 @@ function fetchUsers(){
     }
     
     // scrub hybrid from database
+    function deleteHybrid(){
+        
+    }
 
 
 
