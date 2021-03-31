@@ -8,6 +8,7 @@
     border:1px solid black;
     right:0;
     top:0;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 .column{
@@ -18,4 +19,22 @@
 body{
     color:black;
     background:turquoise;
+}
+
+#users-container{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#users-form{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+#hybrids-container{
+    font-family:Arial, Helvetica, sans-serif;
 }
