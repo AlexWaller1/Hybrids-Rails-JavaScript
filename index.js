@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }) 
 
 const BASE_URL = "http://localhost:3000"
+
     
 // read - fetch users index
 
@@ -12,9 +13,12 @@ function fetchUsers(){
     .then(resp => resp.json())
     .then(users => {
         // we do something withthe data fetched, the data is still composed of Ruby Objects
+        // clear existing list
+        
         for (const user of users){
             // this will convert them to JavaScript Objects
             let u = new User(user.id, user.name, user.username, user.email)
+            
             u.renderUser()
         }
     })
@@ -87,9 +91,14 @@ function fetchUsers(){
         this.location.reload()
     }
 
+    function initHybridsContainer(){
+        document.getElementById("hybrids-container").innerHTML = ''
+    }
     
     // read - fetch hybrids index for a give user
+    
     function fetchHybrids(){
+        
         let hybridsForm = document.getElementById("hybrids-form")
         // add HTML to hybrids-form
          // let hybridsForm = hybridsFormContainer.querySelector("form")
@@ -98,7 +107,12 @@ function fetchUsers(){
           hybridsForm.classList.remove("hidden")
         let userId = parseInt(event.target.dataset.id)
         document.getElementById("userId").value = userId
-        console.log(`${BASE_URL}/users/${userId}`)
+        //console.log(`${BASE_URL}/users/${userId}`)
+        loadHybrids(userId)
+    }
+
+    function loadHybrids(userId){
+        initHybridsContainer()
         fetch(`${BASE_URL}/users/${userId}/hybrids`)
         .then(resp => resp.json())
         .then(hybrids => {
@@ -111,6 +125,7 @@ function fetchUsers(){
               }
 
         })
+
     }
 
     
@@ -126,7 +141,7 @@ function fetchUsers(){
         let userId = document.getElementById("userId").value
 
         let hybrid = {
-            image: image,
+            img_src: image,
             caption: caption,
             userId: userId
             
@@ -151,7 +166,17 @@ function fetchUsers(){
     
     // scrub hybrid from database
     function deleteHybrid(){
+        let userId = parseInt(event.target.dataset.userid)
+        let hybridId = parseInt(event.target.dataset.id)
+
+        fetch(`${BASE_URL}/users/${userId}/hybrids/${hybridId}`, {
+            method: 'DELETE'
+        })
+        .then(()=>loadHybrids(userId))
+
         
+    
+
     }
 
 

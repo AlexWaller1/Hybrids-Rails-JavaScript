@@ -18,6 +18,7 @@ class Hybrid{
         <img src=${this.img_src}, alt="Hybrid Image">
         <li> Description: ${this.caption} </li>
         </ul>
+        <button class="delete-bttn" data-id=${this.id} data-userid=${this.user_id} onclick="deleteHybrid()">Delete Hybrid</button>
         `
     }
 }

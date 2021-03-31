@@ -68,3 +68,19 @@ renderHybrid() {
 
        }
 }
+
+// users is an array of User objects
+// 
+// for (const user of users)
+// 
+
+
+
+function filterArray(users){
+let USERNAMES = [];
+for (const user of users) {
+    USERNAMES.push(user.name)
+
+}
+ return USERNAMES
+}
