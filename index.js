@@ -65,6 +65,7 @@ function fetchUsers(){
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
+                //establishes protocols, key:value pairs
             },
             body: JSON.stringify(user)
         })

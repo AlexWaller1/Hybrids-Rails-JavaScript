@@ -76,11 +76,4 @@ renderHybrid() {
 
 
 
-function filterArray(users){
-let USERNAMES = [];
-for (const user of users) {
-    USERNAMES.push(user.name)
-
-}
- return USERNAMES
-}
+-ask about => and () and .then
