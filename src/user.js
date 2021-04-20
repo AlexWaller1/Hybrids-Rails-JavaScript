@@ -1,5 +1,5 @@
 class User{
-    constructor(id, name, username, email){
+    constructor({id, name, username, email}){
         this.id = id;
         this.name = name;
         this.username = username;
@@ -20,6 +20,7 @@ class User{
            </ul>
            <button class="delete-bttn" data-id=${this.id} onclick="deleteUser()">Delete User</button>
            <button class="get-hybrids-bttn" data-id=${this.id} onclick="fetchHybrids()">See Hybrids</button>
+           
            `
     }
 }

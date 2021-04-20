@@ -8,6 +8,7 @@ class Hybrid{
 
     // instance method thats going to render object to the dom
     // whatever behavior belongs to instance or class is stored in here.
+    
     renderHybrid() {
         let hybridsDiv = document.getElementById("hybrids-container")
 
